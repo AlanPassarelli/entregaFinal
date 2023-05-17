@@ -10,7 +10,17 @@
 
 }
 
+h2 {
+    color: aliceblue;
+}
 
+h3  {
+    color: aliceblue;
+}
+
+p {
+    color: aliceblue;
+}
 
 .btnProducto {
     background-color: #b52424;

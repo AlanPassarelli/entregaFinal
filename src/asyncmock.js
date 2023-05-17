@@ -29,9 +29,9 @@ export const getProductos = () => {
 export const getUnProducto = (id) => {
     return new Promise(resolve => {
         setTimeout (() => {
-            const producto = productos.find (prod => prod.id === id);
+            const producto = productos.find (prod => prod.id ===  parseInt (id));
             resolve (producto);
-        },2000)
+        },500)
 
     })
 }

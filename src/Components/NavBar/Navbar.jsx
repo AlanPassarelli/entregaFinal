@@ -7,20 +7,20 @@ const Navbar = () => {
     
     <Link to={"/"}>
     
-    <h1 style={{color:"grey"}}>The Table Game</h1>
+    <img className='Logo'  src="../Imagenes/Logo tablet game con fondo.jpg" alt="logo" />
     
     </Link>
    
 
     <ul>
         <li>
-          <NavLink to={`/categoria/1`}> MALDOM </NavLink>
+          <NavLink to={`/categoria/1`} className= "letra"> MALDOM </NavLink>
         </li>
         <li>
-        <NavLink to={`/categoria/2`}> BER </NavLink>
+        <NavLink to={`/categoria/2`} className= "letra"> BER </NavLink>
         </li>
         <li>
-        <NavLink to={`/categoria/3`}> DELIV </NavLink>
+        <NavLink to={`/categoria/3`} className= "letra"> DELIV </NavLink>
         </li>
 
     </ul>

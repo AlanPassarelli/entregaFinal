@@ -1,0 +1,9 @@
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    color: black;
+    text-shadow:rgb(128, 123, 123) 2px 2px; 
+}
