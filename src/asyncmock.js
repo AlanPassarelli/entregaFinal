@@ -31,7 +31,7 @@ export const getUnProducto = (id) => {
         setTimeout (() => {
             const producto = productos.find (prod => prod.id ===  parseInt (id));
             resolve (producto);
-        },500)
+        },2000)
 
     })
 }
@@ -41,7 +41,7 @@ export const getUnProductoPorCategoria = (idCategoria) => {
         setTimeout (() => {
             const productosCategoria = productos.filter (prod => prod.idCat === idCategoria)
             resolve (productosCategoria);
-        },500)
+        },2000)
 
     })
 }
