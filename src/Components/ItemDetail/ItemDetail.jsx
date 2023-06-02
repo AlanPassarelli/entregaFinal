@@ -1,16 +1,41 @@
-import "./ItemDetail.css"
-import ItemCount from "../ItemCount/ItemCount"
-const ItemDetail = ({id, nombre, precio, img}) => {
+import './ItemDetail.css'
+import ItemCount from '../ItemCount/ItemCount';
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { CarritoContext } from '../../context/CarritoContext';
+import { useContext } from 'react';
+
+const ItemDetail = ({ id, nombre, precio, img, stock }) => {
+
+  const [agregarCantidad, setAgregarCantidad] = useState(0);
+
+
+  const {agregarProducto} = useContext(CarritoContext);
+
+
+
+  const manejadorCantidad = (cantidad) => {
+    setAgregarCantidad(cantidad);
+
+
+
+    const item = {id, nombre, precio}; 
+    agregarProducto(item, cantidad);
+  }
+
   return (
     <div className='contenedorItem'>
-        <h2>{nombre} </h2>
-        <h3>Precio: {precio} </h3>
-        <h3> ID: {id} </h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae perferendis et possimus, veritatis fugiat dolores nam reiciendis distinctio quasi voluptate voluptatibus id repellendus. Itaque ut a cumque sapiente ad magnam?</p>
-        <img src={img} alt={nombre} />
-        <ItemCount  initial={1} stock={10} onAdd={(quantity) => console.log ("cantidad agregada", quantity)}></ItemCount>
-        <button className="ButtonCarrito">Agregar al Carrito</button>
-       
+      <h2>Nombre: {nombre} </h2>
+      <h3>Precio: {precio} </h3>
+      <h3>ID: {id} </h3>
+      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga odio eveniet facere maiores quo tempore quisquam! Consectetur dolores quos ducimus maiores quam quae, eveniet voluptatibus beatae, nemo cumque tempore modi?</p>
+      <img src={img} alt={nombre} />
+      {
+        //Acá empleamos la lógica del montaje y desmontaje de componentes: 
+      }
+      {
+        agregarCantidad > 0 ? (<Link to="/cart"> Terminar Compra </Link>) : (< ItemCount inicial={1} stock={stock} funcionAgregar={manejadorCantidad} />)
+      }
     </div>
   )
 }
