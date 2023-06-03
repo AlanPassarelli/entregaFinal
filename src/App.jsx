@@ -5,6 +5,8 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Navbar from './Components/NavBar/Navbar';
 import { CarritoProvider } from './context/CarritoContext';
 import Cart from './Components/Cart/Cart';
+import Checkout from './components/Checkout/Checkout';
+
 
 function App() {
   return (
@@ -20,7 +22,9 @@ function App() {
     <Route path='/categoria/:idCategoria' element={<ItemListContainer/>}/>
     <Route path='/item/:idItem' element={<ItemDetailContainer/>}/>
     <Route path='/cart' element = { <Cart/> } />
+    <Route path='/checkout' element = { <Checkout/> } />
     <Route path='*' element={<h2>Sitio en Construcción</h2>} />
+
 
 
   </Routes>
