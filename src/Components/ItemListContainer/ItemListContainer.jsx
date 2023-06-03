@@ -22,7 +22,6 @@ const ItemListContainer = () => {
             })
             setProductos (nuevosProductos);
         })
-        .catch (error => console.log(error))
     }, [idCategoria])
 
 

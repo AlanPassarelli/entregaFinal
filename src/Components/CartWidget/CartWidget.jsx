@@ -4,9 +4,7 @@ import { useContext } from 'react';
 import { CarritoContext } from '../../context/CarritoContext';
 
 const CartWidget = () => {
-  const { carrito } = useContext(CarritoContext);
-
-  const totalCantidad = carrito.reduce((total, producto) => total + producto.cantidad, 0);
+  const { cantidadTotal } = useContext(CarritoContext);
 
   const imgCarrito = "https://cdn-icons-png.flaticon.com/512/107/107831.png";
 
@@ -14,7 +12,7 @@ const CartWidget = () => {
     <Link to='/cart'>
       <img className='imgCarrito' src={imgCarrito} alt="Carrito de Compras" />
       {
-        totalCantidad > 0 && <span> {totalCantidad} </span>
+      cantidadTotal > 0 && <strong className='itemsIndicador'> {cantidadTotal} </strong>
       }
     </Link>
   )

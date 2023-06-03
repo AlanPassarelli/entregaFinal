@@ -14,13 +14,13 @@ const Navbar = () => {
 
     <ul>
         <li>
-          <NavLink to={`/categoria/1`} className= "letra"> MALDOM </NavLink>
+          <NavLink className= "letra" activeClassName="active" to={`/categoria/1`} > MALDOM </NavLink>
         </li>
         <li>
-        <NavLink to={`/categoria/2`} className= "letra"> BER </NavLink>
+        <NavLink className= "letra" activeClassName="active" to={`/categoria/2`} > BER </NavLink>
         </li>
         <li>
-        <NavLink to={`/categoria/3`} className= "letra"> DELIV </NavLink>
+        <NavLink className= "letra" activeClassName="active" to={`/categoria/3`} > DELIV </NavLink>
         </li>
 
     </ul>

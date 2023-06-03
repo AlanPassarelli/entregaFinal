@@ -1,0 +1,75 @@
+.formulario {
+    max-width: 600px;
+    margin: 0 auto;
+    
+}
+
+.fondo {
+    background-color: rgb(109, 118, 127);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    justify-content: center;
+    font-size: 1rem;
+    color: aliceblue;
+}
+
+input,
+textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+}
+
+.orderId {
+    display: block;
+    margin: 4rem;
+    padding: 2rem;
+    font-size: 1.5rem;
+    color: aliceblue;
+    border: 3px solid black;
+    border-radius: 5px;
+
+}
+
+.totales {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    border: 2px solid black;
+    color: aliceblue;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+}
+
+.contenedorButton{ display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ButtonCarrito2 {
+    background-color: #b52424;
+    color: white;
+    font-size: 1.2rem;
+    width: 10rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    
+}

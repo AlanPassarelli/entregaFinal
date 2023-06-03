@@ -4,15 +4,10 @@ import { CarritoContext } from "../../context/CarritoContext"
 import CartItem from "../CartItem/CartItem"
 
 const Cart = () => {
-  const {carrito, vaciarCarrito} = useContext(CarritoContext);
+  const {carrito, vaciarCarrito, total, cantidadTotal} = useContext(CarritoContext);
 
 
-  const totalCantidad = carrito.reduce((total, producto) => total + producto.cantidad, 0);
-
-
-  const total = carrito.reduce((total, producto)=> total + (producto.item.precio * producto.cantidad), 0);
-
-  if(totalCantidad === 0) {
+  if(cantidadTotal === 0) {
       return (
           <>
               <h2>No hay productos en el carrito </h2>
@@ -24,10 +19,10 @@ const Cart = () => {
 return (
   <div>
       {carrito.map(producto => <CartItem key={producto.id} {...producto} />)}
-      <h4> Cantidad Total: {totalCantidad} </h4>
+      <h4> Cantidad Total: {cantidadTotal} </h4>
       <h4> Total: $ {total}  </h4>
-      <button onClick={()=> vaciarCarrito()}> Vaciar Carrito </button>
-      <Link to="/Checkout1"> Finalizar Compra </Link>
+      <button className="ButtonCarrito" onClick={()=> vaciarCarrito()}> Vaciar Carrito </button>
+      <Link className="ButtonCarrito" to="/Checkout1"> Finalizar Compra </Link>
   </div>
 )
 }
