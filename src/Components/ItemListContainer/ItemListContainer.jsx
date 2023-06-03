@@ -24,16 +24,7 @@ const ItemListContainer = () => {
         })
         .catch (error => console.log(error))
     }, [idCategoria])
-    // useEffect(() => {
 
-    //     const funcionProductos = idCategoria ? getUnProductoPorCategoria : getProductos;
-
-    //     funcionProductos (idCategoria)
-
-    //     .then (res => setProductos (res))
-    //     .catch(error => console.error(error))
-
-    // }, [idCategoria])
 
     return (
         <div>
