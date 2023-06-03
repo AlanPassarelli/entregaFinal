@@ -1,0 +1,21 @@
+.fondoCart {
+    background-color: rgb(109, 118, 127);
+    margin: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ButtonCarrito3 {
+    background-color: #b52424;
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    border-radius: 12px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+}
+

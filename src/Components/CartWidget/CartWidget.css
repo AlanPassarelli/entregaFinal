@@ -1,4 +1,12 @@
 .imgCarrito { 
-    width: 3rem;
+    width: 4rem;
+    color: aliceblue;
 
+
+}
+
+.itemsIndicador {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: aliceblue;
 }

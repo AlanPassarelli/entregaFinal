@@ -6,7 +6,7 @@ import { CarritoContext } from '../../context/CarritoContext';
 const CartWidget = () => {
   const { cantidadTotal } = useContext(CarritoContext);
 
-  const imgCarrito = "https://cdn-icons-png.flaticon.com/512/107/107831.png";
+  const imgCarrito = "https://www.pinclipart.com/picdir/big/41-410185_cart-plus-comments-carrito-de-compras-jpg-clipart.png"; 
 
   return (
     <Link to='/cart'>
