@@ -27,6 +27,7 @@ return (
       <h4> Total: $ {total}  </h4>
       <button className="ButtonCarrito3" onClick={()=> vaciarCarrito()}> Vaciar Carrito </button>
       <Link className="ButtonCarrito3" to="/Checkout1"> Finalizar Compra </Link>
+      <Link className="ButtonCarrito3" to='/'> Seguir Comprando </Link>
   </div>
 )
 }

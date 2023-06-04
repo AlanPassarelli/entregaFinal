@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import {getFirestore} from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAs93hj6xWrQPIkBC2jDbdyR3ifk61qN84",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: "the-table-game.firebaseapp.com",
   projectId: "the-table-game",
   storageBucket: "the-table-game.appspot.com",
@@ -12,5 +12,7 @@ const firebaseConfig = {
 
 
 const app = initializeApp(firebaseConfig);
+
+
 
 export const db = getFirestore (app);

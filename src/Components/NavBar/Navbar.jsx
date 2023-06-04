@@ -17,10 +17,10 @@ const Navbar = () => {
           <NavLink className= "letra" to={`/categoria/1`} > MALDOM </NavLink>
         </li>
         <li>
-        <NavLink className= "letra"  to={`/categoria/2`} > BER </NavLink>
+        <NavLink className= "letra"  to={`/categoria/2`} > BUREAU DE JUEGOS</NavLink>
         </li>
         <li>
-        <NavLink className= "letra" to={`/categoria/3`} > DELIV </NavLink>
+        <NavLink className= "letra" to={`/categoria/3`} > DEVIR </NavLink>
         </li>
 
     </ul>

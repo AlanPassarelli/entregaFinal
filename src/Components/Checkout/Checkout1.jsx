@@ -3,6 +3,7 @@ import { CarritoContext } from "../../context/CarritoContext";
 import { db } from "../../Services/Services";
 import { collection, addDoc } from "firebase/firestore";
 import "./Checkout.css";
+import { useEffect } from "react";
 
 const Checkout1 = () => {
   const { carrito, vaciarCarrito, total, cantidadTotal } =
@@ -14,6 +15,16 @@ const Checkout1 = () => {
   const [emailConfimarcion, setEmailConfirmacion] = useState("");
   const [error, setError] = useState("");
   const [ordenId, setOrdenId] = useState("");
+
+useEffect(() =>{
+  const timeout = setTimeout(() => {
+    setError ("");
+
+  }, 3000);
+
+  return () => clearTimeout (timeout);
+} ,[nombre, apellido, telefono, email, emailConfimarcion]);
+
 
   const manejadorSubmit = (event) => {
     event.preventDefault();
